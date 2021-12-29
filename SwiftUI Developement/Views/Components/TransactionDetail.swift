@@ -7,7 +7,7 @@ struct TransactionDetail: View {
     
     var body: some View {
         VStack(alignment: .center) {
-            Image(inReward ? "InReward" : "Outflow")
+            Image(inReward ? ConstantImage.inflow : ConstantImage.outflow)
             Text(name)
             Text(balance)
                 .bold()
@@ -17,11 +17,10 @@ struct TransactionDetail: View {
                 .font(.footnote)
                 .foregroundColor(Color(.systemGray))
         }
-        .padding()
+        .padding(30)
         .frame(minWidth: 0, maxWidth: .infinity)
-        .background(inReward ? Color(ColourStyle.shared.inReward) : ColourStyle.shared.outReward)
+        .background(ColourStyle.shared.systemBackground)
         .cornerRadius(12)  // Inner corner radius
-        .shadow(color: .black, radius: 2, x: 0, y: 2)
     }
 }
 

@@ -17,6 +17,7 @@
 		A308F1262774BB52002DC15D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A308F1252774BB52002DC15D /* LoadingView.swift */; };
 		A30BB802277A06E8007E21B6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A307E77727764D2400FEFD13 /* Constants.swift */; };
 		A30BB803277A08B5007E21B6 /* ColourStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D3C99B277873740040771A /* ColourStyle.swift */; };
+		A3B2CCB7277C4C2A00D905FA /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B2CCB6277C4C2A00D905FA /* Transaction.swift */; };
 		A3C4A0B327771A390012924A /* RewardDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C4A0B227771A390012924A /* RewardDetail.swift */; };
 		A3C4A0B527771BCD0012924A /* RewardInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C4A0B427771BCD0012924A /* RewardInfo.swift */; };
 		A3C4A0B7277722530012924A /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C4A0B6277722530012924A /* String.swift */; };
@@ -26,6 +27,7 @@
 		A3C4A0C1277733C80012924A /* DispatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C4A0C0277733C80012924A /* DispatchView.swift */; };
 		A3C4A0C5277741310012924A /* RewardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C4A0C4277741310012924A /* RewardViewModel.swift */; };
 		A3C4A0C7277758AF0012924A /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C4A0C6277758AF0012924A /* Double.swift */; };
+		A3CA2054277C486B005BD984 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA2053277C486B005BD984 /* Card.swift */; };
 		A3D3C99C277873740040771A /* ColourStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D3C99B277873740040771A /* ColourStyle.swift */; };
 		A3D3C9A02778B8B00040771A /* RewardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D3C99F2778B8B00040771A /* RewardDetailView.swift */; };
 		A3D3C9A22778E7470040771A /* RewardDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D3C9A12778E7470040771A /* RewardDetailViewModel.swift */; };
@@ -73,6 +75,7 @@
 		A308F120277476A7002DC15D /* Rewards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rewards.swift; sourceTree = "<group>"; };
 		A308F1232774BB3B002DC15D /* LoadingViewConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewConfig.swift; sourceTree = "<group>"; };
 		A308F1252774BB52002DC15D /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		A3B2CCB6277C4C2A00D905FA /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		A3C4A0B227771A390012924A /* RewardDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardDetail.swift; sourceTree = "<group>"; };
 		A3C4A0B427771BCD0012924A /* RewardInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardInfo.swift; sourceTree = "<group>"; };
 		A3C4A0B6277722530012924A /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -82,6 +85,7 @@
 		A3C4A0C0277733C80012924A /* DispatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchView.swift; sourceTree = "<group>"; };
 		A3C4A0C4277741310012924A /* RewardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardViewModel.swift; sourceTree = "<group>"; };
 		A3C4A0C6277758AF0012924A /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		A3CA2053277C486B005BD984 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		A3D3C99B277873740040771A /* ColourStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourStyle.swift; sourceTree = "<group>"; };
 		A3D3C99F2778B8B00040771A /* RewardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardDetailView.swift; sourceTree = "<group>"; };
 		A3D3C9A12778E7470040771A /* RewardDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardDetailViewModel.swift; sourceTree = "<group>"; };
@@ -268,6 +272,8 @@
 				BB19C2842746172A00C64FF9 /* UserInfoItem.swift */,
 				BBA1FC47274844BA0049BEE9 /* CurrentBalance.swift */,
 				BBA1FC49274844CB0049BEE9 /* TransactionDetail.swift */,
+				A3CA2053277C486B005BD984 /* Card.swift */,
+				A3B2CCB6277C4C2A00D905FA /* Transaction.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -450,6 +456,7 @@
 				A3C4A0B7277722530012924A /* String.swift in Sources */,
 				BBA1FC48274844BA0049BEE9 /* CurrentBalance.swift in Sources */,
 				BBBE93BF2745E263007B24DD /* MainContainer.swift in Sources */,
+				A3B2CCB7277C4C2A00D905FA /* Transaction.swift in Sources */,
 				A3C4A0B327771A390012924A /* RewardDetail.swift in Sources */,
 				BB19C28D27462FE000C64FF9 /* APIService.swift in Sources */,
 				BB19C2902746347700C64FF9 /* AccountViewModel.swift in Sources */,
@@ -475,6 +482,7 @@
 				A3C4A0BF277732E50012924A /* AppState.swift in Sources */,
 				A308F121277476A7002DC15D /* Rewards.swift in Sources */,
 				A3C4A0C7277758AF0012924A /* Double.swift in Sources */,
+				A3CA2054277C486B005BD984 /* Card.swift in Sources */,
 				A307E77827764D2400FEFD13 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

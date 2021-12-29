@@ -4,17 +4,18 @@ struct CurrentBalance: View {
 	var date: Date
 	var balance: String
 
-	var body: some View {
-		VStack(alignment: .leading) {
-			Text("Balance as of \(date.format())")
-				.foregroundColor(Color(.systemGray))
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text("Balance as of \(date.format())")
+                .foregroundColor(Color(.systemGray))
             Text(balance)
-				.bold()
-				.font(.title)
-		}
-        .padding()
-			.background(Color(.systemGray6))
-			.cornerRadius(12)
+                .bold()
+                .font(.title)
+        }
+        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+        .padding(10)
+        .background(Color(.systemGray6))
+        .cornerRadius(12)
     }
 }
 

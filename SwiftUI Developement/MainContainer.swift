@@ -9,11 +9,11 @@ struct MainContainer: View {
         TabView {
             Rewards()
                 .tabItem {
-                    Label("Rewards", systemImage: "star")
+                    Label("Rewards", image: ConstantImage.rewardIcon)
                 }
             Account()
                 .tabItem {
-                    Label("Account", systemImage: "person")
+                    Label("Account", systemImage: ConstantImage.personCircle)
                 }
         }
     }

@@ -26,4 +26,8 @@ struct RewardDetail: Codable, Identifiable {
     var rewardDate: Date {
         get { return date.convertToDate(dateFormat: "YYYY-MM-DD") ?? Date.now}
     }
+    
+    var transectionDate: String {
+        get { return rewardDate.convertToString(dateformat: "MMM DD,YYYY")}
+    }
 }

@@ -29,59 +29,31 @@ struct RewardDetailView: View {
                 TransactionDetail(inReward: model.rewardDetail.bird, name: model.rewardDetail.title, balance: model.rewardDetail.rewardString)
                     .padding()
                 
-                Form {
-                    Section(header: Text("Card Detail").bold()) {
-                        KeyValueListItem(
-                            key: "Card Number",
-                            value: "xxxx-\(rewardModel.reward.cardNumber)"
-                        )
+                VStack(alignment: .leading) {
+                    Section(header: Text("Transaction Details")
+                                .font(.system(size: 20))
+                                .bold()
+                                .padding(.leading)) {
                         
-                        KeyValueListItem(
-                            key: "Card Expiration",
-                            value: rewardModel.reward.cardExpirationDate
-                        )
-                    }
-                    
-                    Section(header: Text("Reward Detail").bold()) {
-                        KeyValueListItem(
-                            key: "Reward Title",
-                            value: model.rewardDetail.title
-                        )
-                        
-                        KeyValueListItem(
-                            key: "Reward Code",
-                            value: model.rewardDetail.id
-                        )
-                        
-                        KeyValueListItem(
-                            key: "Date",
-                            value: model.rewardDetail.date
-                        )
-                        
-                        KeyValueListItem(
-                            key: "Amount",
-                            value: model.rewardDetail.rewardString
-                        )
-                        
-                        KeyValueListItem(
-                            key: "Status",
-                            value: model.rewardDetail.status
-                        )
-                        
-                        KeyValueListItem(
-                            key: "Bird",
-                            value: model.rewardDetail.bird ? "True" : "False"
-                        )
+                        List() {
+                            KeyValueListItem(
+                                key: "Status",
+                                value: model.rewardDetail.status
+                            )
+                            
+                            KeyValueListItem(
+                                key: "Date",
+                                value: model.rewardDetail.transectionDate
+                            )
+                        }
+                        .accessibilityIdentifier(Identifiers.rewardDetailTable)
+                        .navigationBarTitle("Transaction Detail", displayMode: .inline)
+                        .onAppear {
+                            model.fetch(id: self.id)
+                        }
                     }
                 }
-                .accessibilityIdentifier(Identifiers.rewardDetailTable)
             }
-        }
-        .background(
-            ColourStyle.shared.yellowBackgorudLinearGradient)
-        .navigationBarTitle("Transaction Detail", displayMode: .inline)
-        .onAppear {
-            model.fetch(id: self.id)
         }
     }
 }

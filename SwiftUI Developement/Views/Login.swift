@@ -23,7 +23,7 @@ struct Login: View {
                     state.user.state = .isReady
                 }) {
                     HStack {
-                        Image(systemName: "person.circle.fill")
+                        Image(systemName: ConstantImage.personCircle)
                             .renderingMode(.template)
                             .foregroundColor(.blue)
                         Text("Login")

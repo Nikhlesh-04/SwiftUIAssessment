@@ -23,6 +23,10 @@ struct RewardInfo: Codable {
     }
     
     var expirationDate: Date {
-        get { return cardExpirationDate.convertToDate(dateFormat: "YYYY-MM") ?? Date.now}
+        get { return cardExpirationDate.convertToDate(dateFormat: "yyyy-MM") ?? Date.now}
+    }
+    
+    var expirationString: String {
+        get { return expirationDate.convertToString(dateformat: "MM/YY")}
     }
 }

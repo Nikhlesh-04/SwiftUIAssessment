@@ -19,31 +19,43 @@ struct Rewards: View {
             LoadingView(isShowing: $model.hudVisible, config: hudConfig) {
                 NavigationView {
                     VStack {
-                        CurrentBalance(
-                            date: Date.now,
-                            balance: model.reward.rewardString
-                        )
-                            .padding(.vertical,Constants.kScreenHeight * 0.08)
-                        
-                        List(model.reward.transactions) { transaction in
-                            ZStack {
-                                TransactionDetail(inReward: transaction.bird, name: transaction.title, balance: transaction.rewardString)
-                                NavigationLink(destination: RewardDetailView(id: transaction.id, rewardModel: model)){
-                                }.frame(width: 0, height: 0)
-                            }
-                            .listRowSeparator(.hidden)
+                        Card(cardNumber: model.reward.cardNumber, expireDate: model.reward.expirationString)
+                        VStack(alignment: .leading) {
+                            Text("Current Balance")
+                                .font(.system(size: 20))
+                                .bold()
+                            
+                            CurrentBalance(
+                                date: Date.now,
+                                balance: model.reward.rewardString
+                            )
                         }
-                        .accessibilityIdentifier(Identifiers.rewardTable)
-                        .listStyle(.plain)
+                        .padding(.horizontal)
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                        
+                        VStack(alignment: .leading) {
+                            Section(header: Text("Latest Transactions")
+                                        .font(.system(size: 20))
+                                        .bold()
+                                        .padding(.leading)) {
+                                List(model.reward.transactions) { transaction in
+                                    NavigationLink(destination: RewardDetailView(id: transaction.id, rewardModel: model)){
+                                        Transaction(inReward: transaction.bird, name: transaction.title, date: transaction.transectionDate, balance: transaction.rewardString)
+                                    }
+                                }
+                                .onAppear(perform: {
+                                    UITableView.appearance().contentInset.top = -30
+                                })
+                                
+                            }
+                                        .accessibilityIdentifier(Identifiers.rewardTable)
+                        }
                     }
-                    .navigationBarHidden(true)
-                    .background(
-                        ColourStyle.shared.yellowBackgorudLinearGradient)
-                    .edgesIgnoringSafeArea([.top])
+                    .navigationBarTitle("Rewards")
                 }
             }
-            .ignoresSafeArea()
         }
+        .padding(.top, 1)
     }
 }
 

@@ -134,21 +134,12 @@ class SwiftUIAssessmentUITests: XCTestCase {
         sleep(2)
         
         XCTAssertTrue(app.staticTexts["Disneyland Park"].exists)
-        XCTAssertTrue(app.staticTexts["-$43.82"].exists)
-        XCTAssertTrue(app.staticTexts[ConstantsMessages.kOutReward].exists)
-        
+        XCTAssertTrue(app.staticTexts["-$43.82"].exists)        
         
         let detailTable = app.tables[Identifiers.rewardDetailTable]
         XCTAssertTrue(detailTable.exists)
-        XCTAssertTrue(detailTable.staticTexts["xxxx-9901"].exists)
-        XCTAssertTrue(detailTable.staticTexts["2023-12"].exists)
-        XCTAssertTrue(detailTable.staticTexts["Disneyland Park"].exists)
-        XCTAssertTrue(detailTable.staticTexts["N43D82V019"].exists)
-        XCTAssertTrue(detailTable.staticTexts["2021-07-13"].exists)
-        XCTAssertTrue(detailTable.staticTexts["-$43.82"].exists)
         XCTAssertTrue(detailTable.staticTexts["Completed"].exists)
-        XCTAssertTrue(detailTable.staticTexts["False"].exists)
-        
+        XCTAssertTrue(detailTable.staticTexts["Jan 13,2021"].exists)
     }
     
     func testAccountInfo() {

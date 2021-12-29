@@ -11,6 +11,7 @@ struct Account: View {
         LoadingView(isShowing: $model.hudVisible, config: hudConfig) {
             NavigationView {
                 VStack(alignment: .leading, spacing: 12) {
+                    Spacer()
                     List() {
                         Section {
                             UserInfoItem(account: model.account)
@@ -58,7 +59,7 @@ struct Account: View {
                                         .stroke(Color.blue, lineWidth: 1)
                                 )
                         }
-                    }.padding()
+                    }
                 }.background(Color(.systemBackground))
                     .navigationTitle("Account")
             }

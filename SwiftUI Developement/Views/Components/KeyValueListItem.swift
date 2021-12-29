@@ -10,6 +10,7 @@ struct KeyValueListItem: View {
 			Text(key)
 			Spacer(minLength: 32)
 			Text(value ?? "")
+                .foregroundColor(Color(.systemGray))
 				.lineLimit(1)
                 .redacted(reason: .privacy)
 				.truncationMode(truncation!)

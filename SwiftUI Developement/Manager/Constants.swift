@@ -41,7 +41,7 @@ public struct ApiConstants {
 public struct ConstantsMessages {
 
     static let kInReward        = "Congratulations on earning your bird!"
-    static let kOutReward       = "We are sorry on lose your bird!"
+    static let kOutReward       = ""//"We are sorry on lose your bird!"
     
     static let welcomeText      = "Welcome to Rewards"
 }
@@ -51,4 +51,16 @@ public struct Identifiers {
     static let rewardTable          = "reward_table_view"
     static let rewardDetailTable    = "rewardDetail_table_view"
     static let accountTable         = "account_table_view"
+}
+
+public struct ConstantImage {
+    
+    static let outflow          = "Outflow"
+    static let inflow           = "Frame 2676"
+    static let birdLogo         = "Alpha Logo"
+    static let visaLogo         = "Visa"
+    static let birdColor        = "Union"
+    static let personCircle     = "person.circle.fill"
+    static let rewardIcon       = "Rings"
+    
 }
